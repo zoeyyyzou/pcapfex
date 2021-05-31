@@ -86,7 +86,10 @@ class DataRecognizer(Plugin, metaclass=ABCMeta):
             cls._buildRegexPatterns()
 
         if endindex == 0:
-            endindex = len(data)
+            if not isinstance(data, bytes):
+                return []
+            else:
+                endindex = len(data)
 
         # tr = tracker.SummaryTracker()
         occurences = [m.span() for m in cls._regex.finditer(data, startindex, endindex)]
