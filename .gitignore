@@ -1,0 +1,8 @@
+*.pcap
+*.csv
+dist/
+build/
+pcapfex.egg-info/
+*.db
+.idea/
+venv/
