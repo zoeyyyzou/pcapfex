@@ -42,10 +42,12 @@ class FileObject(object):
 
     @timestamp.setter
     def timestamp(self, value):
-        try:
-            self._timestamp = str(datetime.datetime.utcfromtimestamp(value)).replace(':', '-')
-        except ValueError:
-            self._timestamp = value
+        self._timestamp = value
+        #
+        # try:
+        #     self._timestamp = str(datetime.datetime.utcfromtimestamp(value)).replace(':', '-')
+        # except ValueError:
+        #     self._timestamp = value
 
     def __repr__(self):
         return f"FileObject(md5={self.md5}, sha1={self.sha1}, sha256={self.sha256}, size={self.size}, name={self._name}," \
