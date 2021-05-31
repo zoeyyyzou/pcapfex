@@ -5,7 +5,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 setup(
     name='pcapfex',
-    version='1.0.2',
+    version='1.0.3',
     description='Extract file from pcap file',
     # The project's main homepage.
     url='https://github.com/123zoeyyy/pcapfex',
